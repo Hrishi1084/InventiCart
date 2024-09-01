@@ -23,8 +23,8 @@ const ProductDetails = ({ product }) => {
     return (
         <div className="product-details">
             <h4>{product.title}</h4>
-            <p><strong>Quantity: </strong>{product.load}</p>
-            <p><strong>Price: </strong>{product.reps}</p>
+            <p><strong>Quantity: </strong>{product.quantity}</p>
+            <p><strong>Price: </strong>{product.price}</p>
             <p>{formatDistanceToNow(new Date(product.createdAt), { addSuffix: true })}</p>
             <span className='material-symbols-outlined' onClick={handleClick}>delete</span>
         </div>
