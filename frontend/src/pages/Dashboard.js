@@ -4,7 +4,7 @@ import ProductForm from "../components/ProductForm"
 import { useProductsContext } from "../hooks/useProductsContext"
 import { useAuthContext } from "../hooks/useAuthContext"
 
-const Home = () => {
+const Dashboard = () => {
     const { products, dispatch } = useProductsContext()
     const { user } = useAuthContext()
     useEffect(() => {
@@ -35,4 +35,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default Dashboard
