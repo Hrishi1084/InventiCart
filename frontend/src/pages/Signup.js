@@ -4,10 +4,11 @@ import { useSignup } from '../hooks/useSignup'
 const Signup = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [accountType, setAccountType]= useState('Consumer')
     const { signup, isLoading, error } = useSignup()
     const handleSubmit = async (e) => {
         e.preventDefault()
-        await signup(email, password)
+        await signup(email, password, accountType)
     }
     return (
         <form className='signup' onSubmit={handleSubmit}>
@@ -24,6 +25,11 @@ const Signup = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 value={password}
             />
+            <label>Account Type: </label>
+            <select value={accountType} onChange={(e) => setAccountType(e.target.value)}>
+                <option value="Merchant">Merchant</option>
+                <option value="Consumer">Consumer</option>
+            </select>
             <button disabled={isLoading}>Signup</button>
             {error && <div className="error">{error}</div>}
         </form>

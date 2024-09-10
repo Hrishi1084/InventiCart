@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Dashboard from './pages/Dashboard'
+import Home from './pages/Home'
 import Navbar from './components/Navbar'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
@@ -15,7 +16,13 @@ function App() {
           <Routes>
             <Route
               path="/"
-              element={user ? <Dashboard /> : <Navigate to="/login" />}
+              element={
+                user ? (
+                  user.accountType === 'Merchant' ? <Dashboard /> : <Home />
+                ) : (
+                  <Navigate to="/login" />
+                )
+              }
             />
             <Route
               path="/login"
