@@ -1,5 +1,5 @@
 import { useEffect } from "react"
-import ProductDetails from "../components/ProductDetails"
+import ProductDetailsDashboard from "../components/ProductDetailsDashboard"
 import ProductForm from "../components/ProductForm"
 import { useProductsContext } from "../hooks/useProductsContext"
 import { useAuthContext } from "../hooks/useAuthContext"
@@ -27,7 +27,7 @@ const Dashboard = () => {
         <div className="home">
             <div className="products">
                 {products && products.map((product) => (
-                    <ProductDetails key={product._id} product={product} />
+                    <ProductDetailsDashboard key={product._id} product={product} />
                 ))}
             </div>
             <ProductForm />

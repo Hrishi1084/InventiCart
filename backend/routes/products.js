@@ -5,7 +5,8 @@ const {
     getProduct,
     createProduct,
     deleteProduct,
-    updateProduct
+    updateProduct,
+    updateProductQuantity
 } = require('../controllers/productController')
 const requireAuth = require('../middleware/requireAuth')
 
@@ -21,5 +22,7 @@ router.post('/', createProduct)
 router.delete('/:id', deleteProduct)
 
 router.patch('/:id', updateProduct)
+
+router.patch('/:id', requireAuth, updateProductQuantity)
 
 module.exports = router;
