@@ -25,8 +25,8 @@ function App() {
               }
             />
             <Route
-              path="/login"
-              element={!user ? <Login /> : <Navigate to="/" />}
+              path="inventi-cart.vercel.app/login"
+              element={!user ? <Login /> : <Navigate to="inventi-cart.vercel.app/" />}
             />
             <Route
               path="/signup"
