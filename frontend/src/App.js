@@ -15,12 +15,12 @@ function App() {
         <div className="pages">
           <Routes>
             <Route
-              path="/"
+              path="inventi-cart.vercel.app/"
               element={
                 user ? (
                   user.accountType === 'Merchant' ? <Dashboard /> : <Home />
                 ) : (
-                  <Navigate to="/login" />
+                  <Navigate to="inventi-cart.vercel.app/login" />
                 )
               }
             />
@@ -30,7 +30,7 @@ function App() {
             />
             <Route
               path="/signup"
-              element={!user ? <Signup /> : <Navigate to="/" />}
+              element={!user ? <Signup /> : <Navigate to="inventi-cart.vercel.app/" />}
             />
           </Routes>
         </div>
