@@ -15,22 +15,22 @@ function App() {
         <div className="pages">
           <Routes>
             <Route
-              path="inventi-cart.vercel.app/"
+              path="/"
               element={
                 user ? (
                   user.accountType === 'Merchant' ? <Dashboard /> : <Home />
                 ) : (
-                  <Navigate to="inventi-cart.vercel.app/login" />
+                  <Navigate to="/login" />
                 )
               }
             />
             <Route
-              path="inventi-cart.vercel.app/login"
-              element={!user ? <Login /> : <Navigate to="inventi-cart.vercel.app/" />}
+              path="/login"
+              element={!user ? <Login /> : <Navigate to="/" />}
             />
             <Route
               path="/signup"
-              element={!user ? <Signup /> : <Navigate to="inventi-cart.vercel.app/" />}
+              element={!user ? <Signup /> : <Navigate to="/" />}
             />
           </Routes>
         </div>

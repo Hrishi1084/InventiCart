@@ -9,7 +9,7 @@ const Dashboard = () => {
     const { user } = useAuthContext()
     useEffect(() => {
         const fetchProducts = async () => {
-            const response = await fetch('inventi-cart.vercel.app/api/products', {
+            const response = await fetch('/api/products', {
                 headers: {
                     'Authorization': `Bearer ${user.token}`
                 }

@@ -14,8 +14,8 @@ app.use((req, res, next) => {
     next()
 })
 
-app.use('inventi-cart.vercel.app/api/products', productRoutes)
-app.use('inventi-cart.vercel.app/api/user', userRoutes)
+app.use('/api/products', productRoutes)
+app.use('/api/user', userRoutes)
 
 mongoose.connect(process.env.MONGO_URI)
     .then(() => {
