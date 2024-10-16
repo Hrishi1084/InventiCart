@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useAuthContext } from "../hooks/useAuthContext";
 
 const ProductDetailsHome = ({ product }) => {
-  const [quantityToBuy, setQuantityToBuy] = useState(1); // Default to 1
+  const [quantityToBuy, setQuantityToBuy] = useState(1);
   const { user } = useAuthContext();
 
   const handleBuy = async () => {
