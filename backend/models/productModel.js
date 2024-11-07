@@ -16,7 +16,8 @@ const productSchema = new Schema({
         required: true
     },
     user_id: {
-        type: String,
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
         required: true
     }
 }, { timestamps: true })

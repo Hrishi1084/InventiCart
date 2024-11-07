@@ -16,7 +16,7 @@ const Home = () => {
       const json = await response.json();
 
       if (response.ok) {
-        setProducts(json);
+        setProducts(json); // Now includes user_id with merchant email
       } else {
         console.error('Error fetching products:', json.error);
       }

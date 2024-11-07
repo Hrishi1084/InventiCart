@@ -5,11 +5,14 @@ const getProducts = async (req, res) => {
   const user_id = req.user._id;
   const accountType = req.user.accountType;
   let products;
+
   if (accountType === "Merchant") {
     products = await Product.find({ user_id }).sort({ createdAt: -1 });
   } else {
-    products = await Product.find({});
+    // For Consumers, show all products and populate the merchant's email
+    products = await Product.find({}).populate('user_id', 'email');
   }
+
   res.status(200).json(products);
 };
 
