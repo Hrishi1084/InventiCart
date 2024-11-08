@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import ProductDetailsHome from "../components/ProductDetailsHome";
 import { useAuthContext } from '../hooks/useAuthContext';
+import ChatbotButton from "../components/ChatbotButton"; // Import the chatbot
 
 const Home = () => {
   const [products, setProducts] = useState([]);
@@ -39,6 +40,9 @@ const Home = () => {
           <p>No products available</p>
         )}
       </div>
+
+      {/* Add the chatbot button at the bottom-right */}
+      <ChatbotButton />
     </div>
   );
 };

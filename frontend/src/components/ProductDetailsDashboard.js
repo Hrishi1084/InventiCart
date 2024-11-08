@@ -5,6 +5,7 @@ import { useAuthContext } from '../hooks/useAuthContext'
 const ProductDetails = ({ product }) => {
     const { dispatch } = useProductsContext()
     const { user } = useAuthContext()
+
     const handleClick = async () => {
         if (!user) {
             return
