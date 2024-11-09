@@ -9,7 +9,7 @@ const Home = () => {
 
   useEffect(() => {
     const fetchProducts = async () => {
-      const response = await fetch('https://inventicart.onrender.com/api/products', {
+      const response = await fetch('https://inventi-cart.vercel.app//api/products', {
         headers: {
           'Authorization': `Bearer ${user.token}`,
         }

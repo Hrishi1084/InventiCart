@@ -18,7 +18,7 @@ const ProductForm = () => {
             return
         }
         const product = { title, quantity, price }
-        const response = await fetch('https://inventicart.onrender.com/api/products', {
+        const response = await fetch('https://inventi-cart.vercel.app//api/products', {
             method: 'POST',
             body: JSON.stringify(product),
             headers: {

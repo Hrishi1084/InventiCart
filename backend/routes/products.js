@@ -13,16 +13,16 @@ const requireAuth = require('../middleware/requireAuth')
 const router = express.Router()
 router.use(requireAuth)
 
-router.get('https://inventicart.onrender.com/', getProducts)
+router.get('https://inventi-cart.vercel.app//', getProducts)
 
-router.get('https://inventicart.onrender.com/:id', getProduct)
+router.get('https://inventi-cart.vercel.app//:id', getProduct)
 
-router.post('https://inventicart.onrender.com/', createProduct)
+router.post('https://inventi-cart.vercel.app//', createProduct)
 
-router.delete('https://inventicart.onrender.com/:id', deleteProduct)
+router.delete('https://inventi-cart.vercel.app//:id', deleteProduct)
 
-router.patch('https://inventicart.onrender.com/:id', updateProduct)
+router.patch('https://inventi-cart.vercel.app//:id', updateProduct)
 
-router.patch('https://inventicart.onrender.com/:id', requireAuth, updateProductQuantity)
+router.patch('https://inventi-cart.vercel.app//:id', requireAuth, updateProductQuantity)
 
 module.exports = router;
