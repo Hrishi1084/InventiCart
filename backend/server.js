@@ -4,6 +4,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const productRoutes = require('./routes/products')
 const userRoutes = require('./routes/user')
+const cors = require('cors');
 
 const app = express()
 
@@ -13,6 +14,10 @@ app.use((req, res, next) => {
     console.log(req.path, req.method)
     next()
 })
+
+app.use(cors({
+  origin: 'https://inventi-cart.vercel.app/'
+}));
 
 app.use('/api/products', productRoutes)
 app.use('/api/user', userRoutes)
