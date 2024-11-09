@@ -18,7 +18,7 @@ const ProductDetailsHome = ({ product }) => {
 
     const updatedQuantity = product.quantity - quantityToBuy;
 
-    const response = await fetch(`/api/products/${product._id}`, {
+    const response = await fetch(`https://inventicart.onrender.com/api/products/${product._id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',

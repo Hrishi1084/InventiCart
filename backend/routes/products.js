@@ -13,16 +13,16 @@ const requireAuth = require('../middleware/requireAuth')
 const router = express.Router()
 router.use(requireAuth)
 
-router.get('/', getProducts)
+router.get('https://inventicart.onrender.com/', getProducts)
 
-router.get('/:id', getProduct)
+router.get('https://inventicart.onrender.com/:id', getProduct)
 
-router.post('/', createProduct)
+router.post('https://inventicart.onrender.com/', createProduct)
 
-router.delete('/:id', deleteProduct)
+router.delete('https://inventicart.onrender.com/:id', deleteProduct)
 
-router.patch('/:id', updateProduct)
+router.patch('https://inventicart.onrender.com/:id', updateProduct)
 
-router.patch('/:id', requireAuth, updateProductQuantity)
+router.patch('https://inventicart.onrender.com/:id', requireAuth, updateProductQuantity)
 
 module.exports = router;

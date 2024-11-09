@@ -10,7 +10,7 @@ const ProductDetails = ({ product }) => {
         if (!user) {
             return
         }
-        const response = await fetch('/api/products/' + product._id, {
+        const response = await fetch('https://inventicart.onrender.com/api/products/' + product._id, {
             method: 'DELETE',
             headers: {
                 'Authorization': `Bearer ${user.token}`
