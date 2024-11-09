@@ -2,7 +2,7 @@ const express = require('express')
 const { loginUser, signupUser } = require('../controllers/userController')
 const router = express.Router()
 
-router.post('https://inventi-cart.vercel.app//login', loginUser)
-router.post('https://inventi-cart.vercel.app//signup', signupUser)
+router.post('/login', loginUser)
+router.post('/signup', signupUser)
 
 module.exports = router
