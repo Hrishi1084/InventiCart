@@ -16,11 +16,11 @@ app.use((req, res, next) => {
 })
 
 app.use(cors({
-  origin: 'https://inventi-cart.vercel.app/'
+  origin: ''
 }));
 
-app.use('https://inventicart.onrender.com/api/products', productRoutes)
-app.use('https://inventicart.onrender.com/api/user', userRoutes)
+app.use('https://inventi-cart.vercel.app//api/products', productRoutes)
+app.use('https://inventi-cart.vercel.app//api/user', userRoutes)
 
 mongoose.connect(process.env.MONGO_URI)
     .then(() => {
