@@ -12,6 +12,7 @@ const Navbar = () => {
         <header>
             <div className="container">
                 <Link to="/">
+                    <img src="/logo.png" alt="logo" id="logo"/>
                     <h1>InventiCart</h1>
                 </Link>
                 <nav>
