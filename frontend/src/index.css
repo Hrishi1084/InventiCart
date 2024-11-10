@@ -42,10 +42,11 @@ nav div{
   margin: 0 auto;
 }
 
-.home {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  gap: 100px;
+.product-list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .product-details {
@@ -55,6 +56,9 @@ nav div{
   padding: 20px;
   position: relative;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+  width: 20%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px #ddbc7166;
 }
 
 .product-details h4 {
@@ -142,9 +146,18 @@ nav button {
 
 form.signup,
 form.login {
-  max-width: 400px;
-  margin: 40px auto;
+  max-width: 35%;
+  margin-top: 150px;
   padding: 20px;
   background: #fff;
-  border-radius: 4px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px #ddbc7166;
+}
+
+.loginbg{
+  position: absolute;
+    right: 0px;
+    bottom: 65px;
+    width: 45%;
+    z-index: -1;
 }
