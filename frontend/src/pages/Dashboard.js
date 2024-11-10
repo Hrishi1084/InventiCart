@@ -28,7 +28,7 @@ const Dashboard = () => {
 
     return (
         <div className="dashboard">
-            <div className="products">
+            <div className="product">
                 {products && products.map((product) => (
                     <ProductDetailsDashboard key={product._id} product={product} />
                 ))}
