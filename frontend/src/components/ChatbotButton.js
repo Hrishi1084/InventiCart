@@ -54,7 +54,7 @@ const ChatbotButton = () => {
         response = "To buy a product, click the 'Buy' button on the product.";
       } else if (action === "login") {
         response =
-          "If you're having login issues, try resetting your password.";
+          "If you're having login issues, try turning off your Cap's lock.";
       }
     }
 
